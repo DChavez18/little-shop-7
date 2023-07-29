@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <h3 class="navbar-header">Admin Dashboard</h3>
+    <ul class="navbar-directories">
+      <li><%= link_to 'Dashboard', admin_dashboard_index_path %></li>
+      <li><%= link_to 'Merchants', admin_merchants_path %></li>
+      <li><%= link_to 'Invoices', admin_invoices_path %></li>
+    </ul>
+</nav>
+
+<div>
+    <h3>Invoices</h3>
+
+    <% @invoices.each do |i| %>
+      <li><%= link_to "Invoice ##{i.id}", admin_invoice_path(i) %></li>
+    <% end %>
+
+</div>
+ 
